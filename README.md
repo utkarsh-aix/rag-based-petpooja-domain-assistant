@@ -2,6 +2,14 @@
 
 A context-grounded RAG chatbot designed for **Petpooja** (restaurant SaaS) documentation. It retrieves relevant knowledge from company docs (.md, .txt, .pdf, .docx) and uses Gemini 2.5 Flash to stream accurate answers.
 
+[![Python](https://img.shields.io/badge/Python-3.10+-3776AB?logo=python&logoColor=white)](https://python.org)
+[![LangChain](https://img.shields.io/badge/LangChain-1.2.0-1C3C3C?logo=langchain&logoColor=white)](https://langchain.com)
+[![Gemini](https://img.shields.io/badge/Gemini-2.5_Flash-4285F4?logo=google&logoColor=white)](https://deepmind.google/technologies/gemini/)
+[![FAISS](https://img.shields.io/badge/FAISS-1.13.2-0180FF)](https://faiss.ai)
+[![Flask](https://img.shields.io/badge/Flask-3.0.3-000000?logo=flask&logoColor=white)](https://flask.palletsprojects.com)
+[![CI Tests](https://github.com/utkarsh-aix/rag-based-petpooja-domain-assistant/actions/workflows/ci.yml/badge.svg)](https://github.com/utkarsh-aix/rag-based-petpooja-domain-assistant/actions/workflows/ci.yml)
+[![License](https://img.shields.io/badge/License-Apache_2.0-green)](LICENSE)
+
 ---
 
 ## 📸 Screenshots
