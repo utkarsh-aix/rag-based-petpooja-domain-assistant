@@ -41,6 +41,10 @@ Place your `.md`, `.txt`, `.pdf`, or `.docx` files under the `data/` folder, the
 python3 -m ingest.run_ingest
 ```
 
+> 💡 **Why is the `data/` folder included?**
+> The `data/` folder is tracked on GitHub with generic, public-facing sample documents (FAQs, pricing, and company overview) so that anyone can run and test the RAG pipeline out of the box immediately after cloning. You can easily replace these files with your own custom documents.
+
+
 ### 4. Run the Application
 Launch the Flask development server:
 ```bash
