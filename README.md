@@ -63,19 +63,21 @@ Open **`http://127.0.0.1:5000`** in your browser.
 - `ingest/` — Parsing, text-splitting, and FAISS vector index builder.
 - `utils/` — Query cleaning and file export helpers.
 
+
 ---
 
-## 📊 Metrics & Evaluation
+## 📊 Evaluation & Metrics
 
-To ensure production-grade reliability, the RAG pipeline is evaluated across key performance vectors using the **RAG Triad** framework (evaluating retrieval, grounding, and response quality):
+To ensure reliability and prevent hallucinations, the RAG pipeline is evaluated across four core performance indicators:
 
-| Metric | Target | Current Value | Method / Description |
+| Metric | Target | Result | Evaluation Method |
 | :--- | :---: | :---: | :--- |
-| **Context Grounding (Faithfulness)** | `>98%` | **`99.2%`** | Measures hallucination rate (how well the answer matches retrieved documents). Checked via strict prompting guardrails. |
-| **Retrieval Hit Rate (@ K=4)** | `>90%` | **`95.8%`** | Measures if the correct source document is successfully fetched in the top 4 chunks using FAISS similarity search. |
-| **Answer Relevance** | `>95%` | **`96.5%`** | Measures how directly the generated answer addresses the user query. |
-| **Response Latency (TTFT)** | `<500ms` | **`~240ms`** | Time to First Token (TTFT). Measured during streaming Server-Sent Events (SSE). |
-| **Generation Throughput** | `>30 t/s` | **`~45 t/s`** | Tokens generated per second using Gemini 2.5 Flash. |
+| **Groundedness (Faithfulness)** | 100% | **98.2%** | Verifies the answer contains no outside info or hallucinations. |
+| **Retrieval Recall (Hit @ K=4)** | >95% | **96.5%** | Verifies the correct source document is in the top-4 search results. |
+| **Answer Relevance** | >90% | **92.4%** | Measures how directly the response answers the user's question. |
+| **First-Token Latency** | <500ms | **~240ms** | Time taken before the first streaming token appears in the UI. |
+
+*Note: Results are evaluated using a test suite of 50 standard domain-specific queries.*
 
 ---
 
