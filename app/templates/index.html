@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RAG Based Petpooja Domain Assistant</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Main Chat Area -->
+        <main class="chat-main">
+            <!-- Top Navigation Bar -->
+            <header class="chat-header">
+                <div class="chat-header-left">
+                    <div class="logo-container">
+                        <i data-lucide="bot" class="logo-icon"></i>
+                        <div class="logo-text">
+                            <h1>Petpooja Domain Assistant</h1>
+                            <span>RAG-Based Knowledge Chatbot</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="chat-header-right">
+                    <div class="stat-badge">
+                        <i data-lucide="message-square"></i>
+                        <span id="message-count">0</span> queries
+                    </div>
+                    <button class="btn-nav btn-nav-secondary" id="clear-chat-btn" title="Clear Conversation">
+                        <i data-lucide="trash-2"></i>
+                        <span>Clear</span>
+                    </button>
+                    <button class="btn-nav btn-nav-primary" id="export-txt-btn" title="Export Chat Log">
+                        <i data-lucide="download"></i>
+                        <span>Export</span>
+                    </button>
+                    <button class="theme-toggle-btn" id="theme-toggle-btn" aria-label="Toggle Theme">
+                        <i data-lucide="sun" class="theme-icon-light"></i>
+                        <i data-lucide="moon" class="theme-icon-dark" style="display: none;"></i>
+                    </button>
+                </div>
+            </header>
+
+            <!-- Chat Window / Scrollable Messages -->
+            <div class="chat-window" id="chat-window">
+                <!-- Welcome Message Card -->
+                <div class="message system-message">
+                    <div class="message-wrapper">
+                        <div class="message-card">
+                            <div class="message-content">
+                                <h2>Petpooja Domain Assistant</h2>
+                                <p>Welcome! This is a RAG-based knowledge chatbot built on the Petpooja domain. It retrieves and synthesizes information from the Petpooja knowledge base to answer questions about POS billing, inventory, payroll, and online ordering.</p>
+                                <p>Select one of the suggested questions below or type your query in the input bar:</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Suggested Questions Bar -->
+            <div class="suggestions-container" id="suggestions-container">
+                <div class="suggestions-title">
+                    <i data-lucide="sparkles"></i> Suggested Questions
+                </div>
+                <div class="suggestions-grid">
+                    <button class="suggestion-chip">What features does Petpooja POS support?</button>
+                    <button class="suggestion-chip">How does the inventory management work?</button>
+                    <button class="suggestion-chip">Can I track biometric attendance and shifts?</button>
+                    <button class="suggestion-chip">Does Petpooja support multi-outlet restaurants?</button>
+                </div>
+            </div>
+
+            <!-- Input Bar -->
+            <footer class="chat-input-container">
+                <form id="chat-form" class="chat-form">
+                    <div class="input-wrapper">
+                        <textarea 
+                            id="user-input" 
+                            placeholder="Ask something about Petpooja..." 
+                            rows="1" 
+                            required
+                        ></textarea>
+                        <button type="submit" class="send-btn" id="send-btn" aria-label="Send Message">
+                            <i data-lucide="send"></i>
+                        </button>
+                    </div>
+                    <div class="input-info">
+                        Press Enter to send, Shift + Enter for new line &bull; Powered by RAG Pipeline
+                    </div>
+                </form>
+            </footer>
+        </main>
+    </div>
+
+    <!-- Custom JS -->
+    <script src="{{ url_for('static', filename='js/chat.js') }}"></script>
+</body>
+</html>

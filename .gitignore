@@ -1,0 +1,83 @@
+# ===================================================
+# .gitignore — Petpooja Domain Assistant (RAG Project)
+# ===================================================
+
+# ── Environment & Secrets ──────────────────────────
+.env
+.env.*
+!.env.example
+
+# ── Python Runtime ─────────────────────────────────
+__pycache__/
+*.py[cod]
+*.pyd
+*.pyo
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
+.eggs/
+
+# ── Virtual Environments ────────────────────────────
+venv/
+.venv/
+env/
+ENV/
+
+# ── Vector Store / Embeddings (auto-generated) ──────
+vector_store/
+*.faiss
+*.pkl
+
+# ── Pytest & Testing ────────────────────────────────
+.pytest_cache/
+htmlcov/
+.coverage
+coverage.xml
+*.cover
+
+# ── Flask / App Runtime ─────────────────────────────
+instance/
+*.sqlite3
+
+# ── Logs ────────────────────────────────────────────
+*.log
+logs/
+
+# ── OS & System Files ───────────────────────────────
+.DS_Store
+.DS_Store?
+._*
+Thumbs.db
+ehthumbs.db
+
+# ── IDE & Editor ────────────────────────────────────
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# ── Jupyter (if used) ───────────────────────────────
+.ipynb_checkpoints/
+*.ipynb
+
+# ── Node (if any frontend tooling added later) ──────
+node_modules/
+npm-debug.log*
+
+# ── Streamlit (legacy — no longer used) ─────────────
+.streamlit/
+
+# ── Exported Chat Logs (generated at runtime) ───────
+exports/
+chat_export_*.txt
+
+# ── Screenshots (track the folder, ignore actual images until ready) ─────────
+screenshots/*.png
+screenshots/*.jpg
+screenshots/*.jpeg
+screenshots/*.webp
+screenshots/*.gif
+!screenshots/.gitkeep
