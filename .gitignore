@@ -74,10 +74,4 @@ npm-debug.log*
 exports/
 chat_export_*.txt
 
-# ── Screenshots (track the folder, ignore actual images until ready) ─────────
-screenshots/*.png
-screenshots/*.jpg
-screenshots/*.jpeg
-screenshots/*.webp
-screenshots/*.gif
-!screenshots/.gitkeep
+
