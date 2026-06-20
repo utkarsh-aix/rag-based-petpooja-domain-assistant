@@ -4,12 +4,12 @@ langchain-community==0.4.1
 langchain-text-splitters==1.0.0
 
 # ── LLM Provider (Google Gemini) ──────────────────────────────────────────────
-langchain-google-genai==1.0.1
+langchain-google-genai==4.2.5
 google-generativeai==0.8.6
 
 # ── Embeddings & Vector DB ────────────────────────────────────────────────────
 langchain-huggingface==1.1.0
-sentence-transformers==5.4.0
+sentence-transformers==2.7.0
 faiss-cpu==1.13.2
 
 # ── UI ────────────────────────────────────────────────────────────────────────
